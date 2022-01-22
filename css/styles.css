@@ -1,9 +1,14 @@
 :root {
   --color-primary: #40cfd4;
+  --color-body: hsl(210, 36%, 96%);
+  --color-text: #fff;
+  --color-link: #617d98;
+  --color-link-darker: #102a42;
   --font-primary: "Open Sans", sans-serif;
   --font-secondary: "Roboto", sans-serif;
   --letter-spacing: 4px;
-  --trasition: all 0.3s;
+  --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --trasition: all 0.5s;
 }
 *,
 *::after,
@@ -54,6 +59,17 @@ h2 {
   }
 }
 
+/* Links */
+a {
+  text-decoration: none;
+}
+
+/* Lists */
+.list {
+  list-style: none;
+  padding-left: 0;
+}
+
 /* Icons */
 .icon {
   width: 30px;
@@ -96,4 +112,104 @@ h2 {
   max-height: 100vh;
   opacity: 1;
   transition: var(--trasition);
+}
+/* Navigation Bars */
+.nav {
+  background: #fff;
+  box-shadow: var(--light-shadow);
+  padding: 1.6rem 2.4rem;
+}
+.nav-center {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.nav__list {
+  font-size: 1.76rem;
+  font-weight: 600;
+  width: 100%;
+  /* margin: 0 0 1.5rem 0; */
+}
+.nav__item {
+  color: var(--color-link-darker);
+  cursor: pointer;
+  letter-spacing: var(--letter-spacing);
+  padding: 1.2rem 0.8rem;
+  transition: var(--trasition);
+}
+.nav__item a {
+  color: var(--color-link);
+}
+.nav__item:hover {
+  padding-left: 2rem;
+  /* padding: 1.2rem 0.8rem 1.2rem 2rem; */
+}
+.nav__item:hover.nav__item > a {
+  color: var(--color-primary);
+}
+.nav img {
+  height: 5rem;
+}
+@media screen and (min-width: 768px) {
+  /* Normal Nav */
+  .nav {
+    background: transparent;
+  }
+  .nav-center {
+    width: 90vw;
+    max-width: 1170px;
+    margin: auto;
+    padding: 0;
+  }
+  .nav .collapsible__toggler {
+    display: none;
+  }
+  .nav__list {
+    width: auto;
+    display: flex;
+    max-height: 100%;
+    opacity: 1;
+    font-weight: 700;
+  }
+  .nav__item {
+    padding: 0;
+    margin: 0 1.5rem;
+  }
+  .nav__item a {
+    color: var(--color-text);
+    transition: color 0.3s;
+  }
+  .nav__item:hover.nav__item > a {
+    color: var(--color-text);
+  }
+
+  .nav__item:hover {
+    padding: 0;
+  }
+  /* Fixed Nav */
+  .nav--scroll {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: var(--color-text);
+    width: 100%;
+    box-shadow: var(--box-shadow);
+  }
+  .nav--scroll .nav__item {
+    color: var(--color-link-darker);
+    cursor: pointer;
+    letter-spacing: var(--letter-spacing);
+    transition: var(--trasition);
+  }
+  .nav--scroll .nav__item a {
+    color: var(--color-link);
+  }
+  .nav--scroll .nav__item:hover {
+    padding: 0;
+    margin: 0 1.5rem;
+  }
+  .nav--scroll .nav__item:hover.nav__item > a {
+    color: var(--color-primary);
+  }
 }
