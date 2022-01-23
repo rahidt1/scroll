@@ -213,3 +213,48 @@ a {
     color: var(--color-primary);
   }
 }
+
+/* Buttons */
+.btn {
+  color: var(--color-text);
+  background: transparent;
+  padding: 0.8rem 1.6rem;
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing);
+  border: 2px solid var(--color-text);
+  transition: var(--trasition);
+}
+.btn:hover {
+  background: var(--color-text);
+  color: var(--color-primary);
+}
+
+/* Main Section */
+header {
+  min-height: 100vh;
+  background: linear-gradient(rgba(40, 203, 231, 0.5), rgba(0, 0, 0, 0.7)),
+    url(/images/hero-bcg.jpeg) center/cover no-repeat;
+}
+.banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.banner__heading {
+  margin: 0 0 1.2rem 0;
+}
+.banner__text {
+  margin-bottom: 2rem;
+  max-width: 40rem;
+  text-align: center;
+}
+.banner__link {
+  font-size: 1.4rem;
+}
+@media screen and (min-width: 768px) {
+  .banner__text {
+    max-width: 640px;
+  }
+}
