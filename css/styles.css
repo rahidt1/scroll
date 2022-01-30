@@ -151,10 +151,30 @@ a {
 .nav img {
   height: 5rem;
 }
+.nav--fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: var(--color-text);
+  width: 100%;
+  box-shadow: var(--box-shadow);
+}
+.nav--fixed .nav__item {
+  color: var(--color-link-darker);
+}
+.nav--fixed .nav__item a {
+  color: var(--color-link);
+}
+.nav--fixed .nav__item:hover.nav__item > a {
+  color: var(--color-primary);
+}
 @media screen and (min-width: 768px) {
   /* Normal Nav */
   .nav {
     background: transparent;
+  }
+  .nav.nav--fixed {
+    background: var(--color-text);
   }
   .nav-center {
     width: 90vw;
@@ -186,31 +206,6 @@ a {
 
   .nav__item:hover {
     padding: 0;
-  }
-  /* Fixed Nav */
-  .nav--scroll {
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: var(--color-text);
-    width: 100%;
-    box-shadow: var(--box-shadow);
-  }
-  .nav--scroll .nav__item {
-    color: var(--color-link-darker);
-    cursor: pointer;
-    letter-spacing: var(--letter-spacing);
-    transition: var(--trasition);
-  }
-  .nav--scroll .nav__item a {
-    color: var(--color-link);
-  }
-  .nav--scroll .nav__item:hover {
-    padding: 0;
-    margin: 0 1.5rem;
-  }
-  .nav--scroll .nav__item:hover.nav__item > a {
-    color: var(--color-primary);
   }
 }
 
@@ -244,6 +239,7 @@ header {
 }
 .banner__heading {
   margin: 0 0 1.2rem 0;
+  text-align: center;
 }
 .banner__text {
   margin-bottom: 2rem;
@@ -257,4 +253,31 @@ header {
   .banner__text {
     max-width: 640px;
   }
+}
+
+/* Other Section */
+.section {
+  height: 80vh;
+}
+.section:nth-child(odd) {
+  background-color: #fff;
+}
+.title h2 {
+  color: var(--color-link-darker);
+  text-align: center;
+  padding-top: 2rem;
+}
+.title span {
+  color: var(--color-primary);
+}
+/* Footer */
+footer {
+  text-transform: capitalize;
+  height: 30vh;
+  background-color: var(--color-link-darker);
+  letter-spacing: var(--letter-spacing);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
