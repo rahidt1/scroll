@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
-    <header>
+    <header id="home">
       <nav class="nav collapsible">
         <div class="nav-center">
           <a href="#"><img src="images/logo.svg" alt="" /></a>
@@ -23,10 +23,18 @@
             <use xlink:href="images/sprite.svg#bars-solid"></use>
           </svg>
           <ul class="list nav__list collapsible__content">
-            <li class="nav__item"><a href="#">Home</a></li>
-            <li class="nav__item"><a href="#">About</a></li>
-            <li class="nav__item"><a href="#">Services</a></li>
-            <li class="nav__item"><a href="#">Tours</a></li>
+            <li class="nav__item">
+              <a class="scroll--link" href="#home">Home</a>
+            </li>
+            <li class="nav__item">
+              <a class="scroll--link" href="#about">About</a>
+            </li>
+            <li class="nav__item">
+              <a class="scroll--link" href="#services">Services</a>
+            </li>
+            <li class="nav__item">
+              <a class="scroll--link" href="#tours">Tours</a>
+            </li>
           </ul>
         </div>
       </nav>
@@ -38,7 +46,9 @@
           placeat unde laborum inventore animi quisquam ad ducimus dolorem
           doloribus amet.
         </p>
-        <a href="#" class="btn banner__link">explore tours</a>
+        <a href="#tours " class="btn banner__link scroll--link"
+          >explore tours</a
+        >
       </div>
     </header>
     <!-- About -->
@@ -65,6 +75,11 @@
         <span id="date"></span>. all rights reserved
       </p>
     </footer>
+    <a href="#home" class="scroll--link">
+      <svg class="icon icon--primary top--link">
+        <use xlink:href="images/sprite.svg#arrow-alt-circle-up-solid"></use>
+      </svg>
+    </a>
     <script src="js/index.js"></script>
   </body>
 </html>
