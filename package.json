@@ -1,0 +1,15 @@
+{
+  "name": "10.-scroll",
+  "version": "1.0.0",
+  "description": "A simple javaScript Scroll project created by following the tutorial of freeCodeCamp.org",
+  "default": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.2.1"
+  }
+}

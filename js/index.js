@@ -37,7 +37,7 @@ scrollLinks.forEach(function(link){
         // Prevent Default movement
         e.preventDefault();
 
-        // // Close NavBar upon clicking
+        // Close NavBar upon clicking
         // collapsibles.forEach((item) => {
         //     item.currentTarget.classList.remove('collapsible--expanded')
         // });
@@ -51,16 +51,17 @@ scrollLinks.forEach(function(link){
         const navListHeight = navList.getBoundingClientRect().height;
         let position = element.offsetTop - navHeight;
         const fixedNav = navBar.classList.contains("nav--fixed");
+         console.log(navHeight);
 
         if (!fixedNav) {
             position = position - navHeight;
           }
-          if (navHeight > 82) {
+        if (navHeight > 88) {
             position = position + navListHeight;
           }
         window.scrollTo({
             left:0,
             top: position
-        })
+        });
     })
 })
